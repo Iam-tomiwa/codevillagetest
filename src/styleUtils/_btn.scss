@@ -1,0 +1,57 @@
+@mixin button {
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 16px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  &:focus {
+    outline: none;
+    box-shadow: 0px 2px 4px rgba(5, 39, 105, 0.1),
+      0px 4px 6px rgba(5, 39, 105, 0.15);
+  }
+}
+
+@mixin downloadBtn {
+  @include button;
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  .fill {
+    margin-left: 4px;
+    path {
+      fill: $primary;
+    }
+  }
+  .fill2 {
+    margin-right: 6px;
+
+    path {
+      stroke: $primary;
+    }
+  }
+}
+
+@mixin createBtn {
+  @include button;
+  color: var(--whiteClr);
+  background: var(--primary);
+}
+
+@mixin downloadBtn2 {
+  @include button;
+  background: var(--primary);
+  color: var(--whiteClr);
+  .fill {
+    margin-left: 4px;
+    path {
+      fill: var(--whiteClr);
+    }
+  }
+}
