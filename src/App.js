@@ -30,7 +30,6 @@ const App = () => {
     return () => abortCont.abort();
   }, []);
 
-  console.log(products);
   return (
     <div className="App layout">
       <main className="inner">
